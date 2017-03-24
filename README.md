@@ -2,18 +2,9 @@
 
 This is mumble (murmur) in docker.
 
-### Exposed ports: 
+### Run command
 
-64738 - client connections
-
-### Exposed volumes 
-
-/data/config - config file
-/data/db - database
-/data/cert - mumble certificates
-
-### Run Command
-
+```
 docker run --name mumble-server \
 -v [path to mumble folder]/config:/data/config \
 -v [path to mumble folder]/db:/data/db \
@@ -21,10 +12,30 @@ docker run --name mumble-server \
 -p 64738:64738/tcp \
 -p 64738:64738/udp \
 -d kee7a/mumble:latest
+```
 
-### Config
+### Exposed ports: 
 
-mumble-server.ini
+64738 - client connections
+
+### Exposed volumes 
+
+```
+/data/config - config file
+/data/db - database
+/data/cert - mumble certificates
+```
+
+### Expected Files
+
+```
+config/mumble-server.ini
+
+db/murmur.sqlite
+
+cert/fullchain.pem
+cert/privkey.pem
+```
 
 #### Example Config
 
