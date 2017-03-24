@@ -24,8 +24,3 @@ EXPOSE 64738/tcp
 USER mumble
 
 ENTRYPOINT ["/usr/bin/murmurd", "-fg", "-ini", "/data/config/mumble-server.ini"]
-
-
-#docker run -d -v /home/luna/mumble:/data --name mumble-server -p 64738:64738/tcp -p 64738:64738/udp kee7a/mumble:1.2.19-a
-
-#add shit for certs?
