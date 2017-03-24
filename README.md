@@ -2,17 +2,17 @@
 
 This is mumble (murmur) in docker.
 
-###Exposed ports: 
+### Exposed ports: 
 
 64738 - client connections
 
-###Exposed volumes 
+### Exposed volumes 
 
 /data/config - config file
 /data/db - database
 /data/cert - mumble certificates
 
-###Run Command
+### Run Command
 
 docker run --name mumble-server \
 -v [path to mumble folder]/config:/data/config \
@@ -22,12 +22,13 @@ docker run --name mumble-server \
 -p 64738:64738/udp \
 -d kee7a/mumble:latest
 
-###Config
+### Config
 
 mumble-server.ini
 
 #### Example Config
 
+---
 ```
 # Murmur configuration file.
 #
@@ -230,3 +231,4 @@ Ice.Warn.UnknownProperties=1
 Ice.MessageSizeMax=65536
 ```
 
+---
