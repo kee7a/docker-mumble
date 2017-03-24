@@ -16,7 +16,9 @@ docker run --name mumble-server \
 
 ### Exposed ports: 
 
+```
 64738 - client connections
+```
 
 ### Exposed volumes 
 
